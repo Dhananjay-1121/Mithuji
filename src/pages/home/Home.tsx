@@ -310,10 +310,10 @@ return (
                             <button className="btn" onClick={handleSearch}><SearchOutlinedIcon className="icon"/>Search</button>
                         </div>
 
-                        <div className="selectCon">
-                            <select name="" id="">
-                                <option value="">All India</option>
-                            </select>
+                        <div className="flex justify-center" >
+                           
+                                <div className="selectCon">All India</div>
+                            
                         </div>
                     </div>
                 </div>
@@ -358,12 +358,12 @@ return (
                 <div className="midContainer">
 
                     <div className="left">
-                        <section>Sponsored Products</section>
+                        <section className="font-bold text-3xl">Sponsored Products</section>
                         {array.map((val, index) => {
                             return (
                                 <div className="boxCon" key={index} onClick={() => console.log(val)}>
-                                    <img src={`${BASEURL}/content/get/${val.image}`} className="box"></img>
-                                    <span>{val.name}</span>
+                                    <img src={`${BASEURL}/content/get/${val.image}`} className="box flex justify-center"></img>
+                                    <span className="flex justify-center font-semibold">{val.name}</span>
                                 </div>
                             );
                         })}
