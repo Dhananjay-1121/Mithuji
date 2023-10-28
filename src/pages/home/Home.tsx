@@ -392,7 +392,32 @@ return (
                 </div>
 
                 <div className="productCategoryCon">
-                    <div className="d1"></div>
+                    <div className="c1">
+                        <div className="flex flex-col  pt-4 px-3 ">
+                            <div className="text-black text-2xl font-bold">New Product Category</div>
+                            <div className="px-3 w-fit mt-4 text-white font-semibold bg-[rgb(63,164,116)] py-2 rounded-md">Explore This</div>
+                            <img className="" src="https://picsum.photos/200" alt="image" />
+                        </div>
+                    </div>
+                    <div className="d2">
+                        <ProductCard /> 
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                        <ProductCard />
+                    </div>
+                    <div className="d3">
+                        <section><EastIcon /> <br /> View All</section>
+                    </div>
+                </div>
+                <div className="productCategoryCon">
+                    <div className="c2">
+                    <div className="flex flex-col  pt-4 px-3 ">
+                            <div className="text-black text-2xl font-bold">New Product Category</div>
+                            <div className="px-3 w-fit mt-4 text-white font-semibold bg-[rgb(63,122,164)] py-2 rounded-md">Explore This</div>
+                            <img className="" src="https://picsum.photos/200" alt="image" />
+                        </div>
+                    </div>
                     <div className="d2">
                         <ProductCard />
                         <ProductCard />
@@ -405,20 +430,13 @@ return (
                     </div>
                 </div>
                 <div className="productCategoryCon">
-                    <div className="d1"></div>
-                    <div className="d2">
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
+                    <div className="c3">
+                    <div className="flex flex-col  pt-4 px-3 ">
+                            <div className="text-black text-2xl font-bold">New Product Category</div>
+                            <div className="px-3 w-fit mt-4 text-white font-semibold bg-[rgb(96,64,164)] py-2 rounded-md">Explore This</div>
+                            <img className="" src="https://picsum.photos/200" alt="image" />
+                        </div>
                     </div>
-                    <div className="d3">
-                        <section><EastIcon /> <br /> View All</section>
-                    </div>
-                </div>
-                <div className="productCategoryCon">
-                    <div className="d1"></div>
                     <div className="d2">
                         <ProductCard />
                         <ProductCard />
