@@ -29,7 +29,7 @@ interface RootState {
 }
 
 const Navbar: React.FC<NavbarProps> = ({
-  sticky = false,
+  sticky = true,
   locateShow = false,
 }) => {
   const dispatch = useDispatch<ThunkDispatch<any, any, any>>();
@@ -94,6 +94,8 @@ const Navbar: React.FC<NavbarProps> = ({
             value={searchTerm}
             onChange={handleSearchChange}
           />
+
+{/* 
           <button onClick={toggleOpen}>
             <p className="icon">
               {isOpen ? (
@@ -108,12 +110,18 @@ const Navbar: React.FC<NavbarProps> = ({
             <div className="dropdown">
               <option value="">Select location</option>
               <option value="trackIPAddress">My Location</option>
-              <option value="setCityLocation">City</option>
-              {/* Add as many options as you need */}
-              {/* </select> */}
+              <option value="setCityLocation">City</option> 
+               
+              
             </div>
           )}
+
+ */}
+
+          
           {/* make it dropdown that is haveing my location option and city options if my location so track ip address */}
+
+
         </div>
       )}
       {localStorage.getItem("auth_token") && (
