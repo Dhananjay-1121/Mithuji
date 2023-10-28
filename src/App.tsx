@@ -21,6 +21,7 @@ import ProductDetails from "./pages/product-details/productDetails"
 import SearchProducts from "./pages/search-products/searchProducts"
 import AdminCategory from "./pages/admin-category/adminCategory"
 import Message from "./pages/message/Messages"
+import Forget from "./pages/forget-password/forget"
 // import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { ThunkDispatch } from "@reduxjs/toolkit"
@@ -30,6 +31,7 @@ import { loadUser } from "./store/user-slice/userSlice"
 //------------------------------ Routes ---------------------//
 export const home = "/";
 export const login = "/login";
+export const forget = "/forget-password";
 export const admin_login = "/admin-login";
 export const signup = "/signup";
 export const products = "/products";
@@ -67,6 +69,7 @@ const App = () => {
       <Routes>
         <Route path={home || "/"} element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/forget-password" element={<Forget/>} />
         <Route path={admin_login || "/admin-login"} element={<AdminLogin />} />
         <Route path={admin_category || "/admin-category"} element={<AdminCategory />} />
         <Route path={signup || "/signup"} element={<SignUp />} />

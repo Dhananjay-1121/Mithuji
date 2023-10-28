@@ -3,7 +3,7 @@ import "./login.scss"
 import { Button } from "@mui/material"
 import Navbar from "../../components/navbar/Navbar"
 import { useNavigate } from "react-router-dom"
-import { signup } from "../../App"
+import { signup, forget } from "../../App"
 // import { ThunkDispatch } from "@reduxjs/toolkit"
 // import { useDispatch } from "react-redux"
 // import { loginUser } from "../../store/user-slice/userSlice"
@@ -108,7 +108,7 @@ const Login = () => {
             <label htmlFor="password">Password</label>
             <span className={type === "password" ? "fa fa-eye" : "fa fa-eye-slash"} onClick={toggleType}></span>
             </div>
-            <div className="forgot"> <span>Forgot Password</span></div>
+            <div className="forgot"> <span onClick={()=>navigate(forget)}>Forgot Password</span></div>
 
             <div className="form-group">
               <Button variant="contained" className="bt1" onClick={login}>Log In</Button>
