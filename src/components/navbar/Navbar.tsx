@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import CabinIcon from "@mui/icons-material/Cabin";
 import SmsIcon from "@mui/icons-material/Sms";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
-import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
-import ArrowDropUpOutlinedIcon from "@mui/icons-material/ArrowDropUpOutlined";
+// import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
+// import ArrowDropUpOutlinedIcon from "@mui/icons-material/ArrowDropUpOutlined";
 import PlaceIcon from "@mui/icons-material/Place";
 import { useDispatch } from "react-redux";
 import { ThunkDispatch } from "@reduxjs/toolkit";
@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const [searchTerm, setSearchTerm] = useState("");
 
-  const toggleOpen = () => setIsOpen(!isOpen);
+  // const toggleOpen = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     dispatch(loadUser());

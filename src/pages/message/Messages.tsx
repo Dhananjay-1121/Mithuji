@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 // import { Button } from "@mui/material"
 import SendIcon from '@mui/icons-material/Send';
-import { MessageBox, ChatItem, Input, Button } from 'react-chat-elements';
+import { MessageBox, ChatItem, Input } from 'react-chat-elements';
 import 'react-chat-elements/dist/main.css'
 // import SearchIcon from '@mui/icons-material/Search';
 import Navbar from "../../components/navbar/Navbar"
@@ -21,19 +21,19 @@ const Message = () => {
   // const { url } = useParams();
 
   // const navigate = useNavigate();
-  interface MessageBoxType {
-    type: "text" | "image" | "audio" | "video";
-    text?: string;
-    image?: string;
-    audio?: string;
-    video?: string;
-    position?: "left" | "right";
-    title?: string;
-    focus?: boolean;
-    titleColor?: string;
-    forwarded?: boolean;
-    date?: Date;
-  }
+  // interface MessageBoxType {
+  //   type: "text" | "image" | "audio" | "video";
+  //   text?: string;
+  //   image?: string;
+  //   audio?: string;
+  //   video?: string;
+  //   position?: "left" | "right";
+  //   title?: string;
+  //   focus?: boolean;
+  //   titleColor?: string;
+  //   forwarded?: boolean;
+  //   date?: Date;
+  // }
 
   // const ChatRoom = () => {
     if (!firebase.apps.length) {
@@ -113,11 +113,11 @@ const [Messages] = useCollectionData(query);
   //   });
   // }, []);
 
-  useEffect(() => {
-  if (Messages) {
-    setMessages([...Messages]);
-  }
-}, [Messages]);
+//   useEffect(() => {
+//   if (Messages) {
+//     setMessages([...Messages]);
+//   }
+// }, [Messages]);
 
   useEffect(() => {
     getSeller();
@@ -175,33 +175,33 @@ const handleClickChat = async (chatItem: any) => {
 
 
   
-const listItems = () => {
-  return seller.map((d, i) => {
-    console.log(seller);
-    return (
-      <ChatItem
-        key={i}
-        avatar={'https://s3-alpha-sig.figma.com/img/4e72/ba93/7470aca20a1638407a50281c1d9e14ff?Expires=1695600000&Signature=g7UnJ3zMaW9531LP2yfocSzDRfCeU~IrET8XHSGPbPhgDansLOf1Sjw3z7TW-pRUAV152zDdZBL5TG-kThKr3m1b0W1lgT~acbG7H9sQXWEANMjLZCwdebIfEOy0xif8b48dfMrMOpVqdQxCO~9T-xLxX5JCQkQsadjE84tK91oqgF5fG8My1l1OzRnU1ClD3vHzpLN8eRaqpo76my02s-ErFUYa9A4nTHAJLUghZKi4Pm0EX1WC99l-rIcxkVMqPp2mG0iO8w-i09iNbgsbwJJU86eHRTV3nlLlXzTwKdEnhJpyQzX2ia3cRdhxp6~wS0osovA1wWXFefT~noDWAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'} // Replace with the actual avatar URL
-        alt={'Reactjs'} // Replace with the actual alt text
-        title={d.name} // Use the name as the title
-        subtitle={'Pls Provide the details of the...'} // Use the text as the subtitle
-        date={new Date()} // Use the current date
-        unread={1} // Replace with the actual number of unread messages
-        onClick={() => {handleClickChat(d);
-          setActiveChat({
-          id: d.id,
-          avatar: 'https://s3-alpha-sig.figma.com/img/4e72/ba93/7470aca20a1638407a50281c1d9e14ff?Expires=1695600000&Signature=g7UnJ3zMaW9531LP2yfocSzDRfCeU~IrET8XHSGPbPhgDansLOf1Sjw3z7TW-pRUAV152zDdZBL5TG-kThKr3m1b0W1lgT~acbG7H9sQXWEANMjLZCwdebIfEOy0xif8b48dfMrMOpVqdQxCO~9T-xLxX5JCQkQsadjE84tK91oqgF5fG8My1l1OzRnU1ClD3vHzpLN8eRaqpo76my02s-ErFUYa9A4nTHAJLUghZKi4Pm0EX1WC99l-rIcxkVMqPp2mG0iO8w-i09iNbgsbwJJU86eHRTV3nlLlXzTwKdEnhJpyQzX2ia3cRdhxp6~wS0osovA1wWXFefT~noDWAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4', // Replace with actual avatar URL
-          alt: 'Reactjs', // Replace with actual alt text
-          title: d.name,
-          subtitle: 'Pls Provide the details of the...', // Replace with actual subtitle
-          date: new Date(),
-          unread: 1, // Replace with actual number of unread messages
-        })}
-      }
-      />
-    );
-  });
-};
+// const listItems = () => {
+//   return seller.map((d, i) => {
+//     console.log(seller);
+//     return (
+//       <ChatItem
+//         key={i}
+//         avatar={'https://s3-alpha-sig.figma.com/img/4e72/ba93/7470aca20a1638407a50281c1d9e14ff?Expires=1695600000&Signature=g7UnJ3zMaW9531LP2yfocSzDRfCeU~IrET8XHSGPbPhgDansLOf1Sjw3z7TW-pRUAV152zDdZBL5TG-kThKr3m1b0W1lgT~acbG7H9sQXWEANMjLZCwdebIfEOy0xif8b48dfMrMOpVqdQxCO~9T-xLxX5JCQkQsadjE84tK91oqgF5fG8My1l1OzRnU1ClD3vHzpLN8eRaqpo76my02s-ErFUYa9A4nTHAJLUghZKi4Pm0EX1WC99l-rIcxkVMqPp2mG0iO8w-i09iNbgsbwJJU86eHRTV3nlLlXzTwKdEnhJpyQzX2ia3cRdhxp6~wS0osovA1wWXFefT~noDWAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'} // Replace with the actual avatar URL
+//         alt={'Reactjs'} // Replace with the actual alt text
+//         title={d.name} // Use the name as the title
+//         subtitle={'Pls Provide the details of the...'} // Use the text as the subtitle
+//         date={new Date()} // Use the current date
+//         unread={1} // Replace with the actual number of unread messages
+//         onClick={() => {handleClickChat(d);
+//           setActiveChat({
+//           id: d.id,
+//           avatar: 'https://s3-alpha-sig.figma.com/img/4e72/ba93/7470aca20a1638407a50281c1d9e14ff?Expires=1695600000&Signature=g7UnJ3zMaW9531LP2yfocSzDRfCeU~IrET8XHSGPbPhgDansLOf1Sjw3z7TW-pRUAV152zDdZBL5TG-kThKr3m1b0W1lgT~acbG7H9sQXWEANMjLZCwdebIfEOy0xif8b48dfMrMOpVqdQxCO~9T-xLxX5JCQkQsadjE84tK91oqgF5fG8My1l1OzRnU1ClD3vHzpLN8eRaqpo76my02s-ErFUYa9A4nTHAJLUghZKi4Pm0EX1WC99l-rIcxkVMqPp2mG0iO8w-i09iNbgsbwJJU86eHRTV3nlLlXzTwKdEnhJpyQzX2ia3cRdhxp6~wS0osovA1wWXFefT~noDWAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4', // Replace with actual avatar URL
+//           alt: 'Reactjs', // Replace with actual alt text
+//           title: d.name,
+//           subtitle: 'Pls Provide the details of the...', // Replace with actual subtitle
+//           date: new Date(),
+//           unread: 1, // Replace with actual number of unread messages
+//         })}
+//       }
+//       />
+//     );
+//   });
+// };
 
   return (
     <>
@@ -214,7 +214,7 @@ const listItems = () => {
     <p className={`tag rfq ${activeTag === 'RFQ' ? 'activeTag' : ''}`} onClick={() => handleClick('RFQ')}>RFQ</p>
   </div>
   <div className="chatItems">
-    {listItems()}
+    {/* {listItems()} */}
   </div>
 </div>
           <div className="rightBox">
@@ -266,7 +266,7 @@ const listItems = () => {
       />
     </div> */}
 <div className="messageSection">
-  <div className="messages">
+  {/* <div className="messages">
     {messages.map((message, i) => (
       <MessageBox
         className="messageBox"
@@ -278,7 +278,7 @@ const listItems = () => {
         date={new Date()}
       />
     ))}
-  </div>
+  </div> */}
   <Input
     className="inputMessage"
     placeholder="Type a message"
