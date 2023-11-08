@@ -10,7 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 // import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
-
+import placeholder from '../../../public/placeholder.jpg'
 const CustomerProfile = () => {
 
   const navigate = useNavigate();
@@ -654,7 +654,10 @@ const percentage = document.querySelector('.progress-percentage > p');
           <div className="right">
             <div className="box-left">
               <div className="boxCon">
-                <img src={`http://ec2-16-170-207-123.eu-north-1.compute.amazonaws.com:8080/api/v1/content/get/${userData.id}`} className="box-img"></img>
+                <img 
+                // src={`http://ec2-16-170-207-123.eu-north-1.compute.amazonaws.com:8080/api/v1/content/get/${userData.id}`} 
+                src={placeholder}
+                className="box-img"></img>
                 <span>Change Profile</span>
               </div>
               <div className="align">

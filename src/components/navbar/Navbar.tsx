@@ -80,12 +80,12 @@ const Navbar: React.FC<NavbarProps> = ({
   // console.log(isOpen);
 
   return (
-    <nav className={`navBar ${sticky ? "sticky" : ""}`}>
+    <nav className={`navBar  ${sticky ? "sticky" : ""}`}>
       <section className="logo" onClick={() => navigate("/")}>
         mithuji
       </section>
       {locateShow && (
-        <div className="location">
+        <div className="location ">
           <PlaceIcon />
           <input
             type="text"
